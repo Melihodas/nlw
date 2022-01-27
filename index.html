@@ -5,9 +5,12 @@
     <title>Fer Santos - Dowhile 2021</title>
     <link rel="stylesheet" href="style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -15,69 +18,84 @@
       <div class="container">
         <div class="avatar">
           <span>
-            <img
-            src="images/build.svg"
-            alt="Selo Rocketseat"
-          />
+            <img src="images/build.svg" alt="Selo Rocketseat" />
           </span>
-          
-          <img src="http://lorempixel.com/185/185/people" alt="Foto pessoal" />
+          <!--http://lorempixel.com/185/185/people-->
+          <img
+            src="https://www.electromarket.shop/142985-thickbox_default/ixus-185-red-vuk-cam.jpg"
+            alt="Foto pessoal"
+          />
         </div>
-        <h1>Fer Santos</h1>
-        <a href="#">
+        <h1 id="userName">Fer Santos</h1>
+        <a href="https://github.com/Melihodas/">
           <img src="/images/github.svg" alt="ícone github" />
           fersantos</a
         >
 
         <p>An instructor focused on helping pople start programming for web</p>
 
-        <ul>
-         <li>
-          <li>
-            <a href="https://youtube.com/fersantos">
-              <img
-                src="images/youtube.svg"
-                alt="ícone youtube"
-                target="_blank"
-              />
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a
+              href="https://www.youtube.com/channel/UC1df87-xy9Ei74MFJ_1k_wA"
+              target="_blank"
+            >
+              <img src="images/youtube.svg" alt="ícone youtube" />
             </a>
           </li>
-         </li>
-         <li>
-          <li>
-            <a href="https://instagram.com/15fersantos">
-              <img
-                src="images/instagram.svg"
-                alt="ícone instagram"
-                target="_blank"
-              />
+          <li class="instagram">
+            <a
+              href="https://instagram.com/15fersantos"
+              target="_blank"
+              id="instagram"
+            >
+              <img src="images/instagram.svg" alt="ícone instagram" />
             </a>
           </li>
-         </li>
-         <li>
-          <li>
-            <a href="https://facebook.com/fersantos">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
+          <li class="facebook">
+            <a
+              href="https://facebook.com/fer.santos.984"
+              target="_blank"
+              id="facebook"
+            >
+              <img src="images/facebook.svg" alt="ícone facebook" />
             </a>
           </li>
-         </li>
-         <li>
-          <li>
-            <a href="https://twitter.com/shidodemisak">
-              <img
-                src="images/twiter.svg"
-                alt="ícone twitter"
-                target="_blank"
-              />
+          <li class="twitter">
+            <a
+              href="https://twitter.com/shidodemisak"
+              target="_blank"
+              id="twitter"
+            >
+              <img src="images/twiter.svg" alt="ícone twitter" />
             </a>
           </li>
-         </li>
         </ul>
       </div>
     </main>
+    <script>
+      const linksSocialMedia = {
+        github: 'Melihodas',
+        youtube: 'channel/UC1df87-xy9Ei74MFJ_1k_wA',
+        facebook: 'fer.santos.984',
+        instagram: '15fersantos',
+        twitter: 'shidodemisak'
+      }
+      /*
+      function mudarDeCorOsLinks(){
+
+      }*/
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+
+          alert(li.children[0].href)
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
   </body>
 </html>

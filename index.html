@@ -24,15 +24,18 @@
           <img
             src="https://www.electromarket.shop/142985-thickbox_default/ixus-185-red-vuk-cam.jpg"
             alt="Foto pessoal"
+            id="userImage"
           />
         </div>
         <h1 id="userName">Fer Santos</h1>
-        <a href="https://github.com/Melihodas/">
+        <a id="userLink" href="https://github.com/Melihodas/" target="blank">
           <img src="/images/github.svg" alt="ícone github" />
-          fersantos</a
+          <span id="userLogin">fersantos</span></a
         >
 
-        <p>An instructor focused on helping pople start programming for web</p>
+        <p id="userBio">
+          An instructor focused on helping pople start programming for web
+        </p>
 
         <ul id="socialLinks">
           <li class="youtube">
@@ -73,29 +76,6 @@
         </ul>
       </div>
     </main>
-    <script>
-      const linksSocialMedia = {
-        github: 'Melihodas',
-        youtube: 'channel/UC1df87-xy9Ei74MFJ_1k_wA',
-        facebook: 'fer.santos.984',
-        instagram: '15fersantos',
-        twitter: 'shidodemisak'
-      }
-      /*
-      function mudarDeCorOsLinks(){
-
-      }*/
-      function changeSocialMediaLinks() {
-        for (let li of socialLinks.children) {
-          const social = li.getAttribute('class')
-
-          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-
-          alert(li.children[0].href)
-        }
-      }
-
-      changeSocialMediaLinks()
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
